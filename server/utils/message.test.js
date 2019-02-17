@@ -1,4 +1,3 @@
-//jshint esversion: 6
 
 let moment = require('moment');
 var expect = require('expect');
@@ -9,7 +8,7 @@ describe('generateMessage', () => {
     it('should generate correct message object', () => {
         var from = 'Jen';
         var text = 'Some message';
-        var createdAt = moment().valueOf();
+        var createdAt = moment().valueOf()+1;
 
         var message = generateMessage(from,text);
 
