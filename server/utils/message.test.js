@@ -1,3 +1,5 @@
+//jshint esversion: 6
+
 let moment = require('moment');
 var expect = require('expect');
 

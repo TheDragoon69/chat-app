@@ -154,9 +154,24 @@
     padding: 10px;
   }
   
-  .message {
-    padding: 10px;
+  .message, .ret-loc-message {
+    padding: 15px;
+    
+    margin-bottom: 10px;
+    width: -moz-fit-content;
+    max-width: 320px;
+    border-radius: 10%;
   }
+
+  .message {
+    background: rgba(70, 183, 251, 1);
+    color: white;
+  }
+
+  .ret-loc-message {
+    background: rgba(229, 229, 234, 1);
+  }
+
   
   .message__title {
     display: flex;
@@ -169,7 +184,11 @@
   }
   
   .message__title span {
-    color: #999;
+    color: #fff;
+  }
+
+  .ret-loc-message .message__title span {
+    color: black;
   }
   
   @media (max-width: 600px) {
