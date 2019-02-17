@@ -1,3 +1,4 @@
+let moment = require('moment');
 var expect = require('expect');
 
 var {generateMessage, generateLocationMessage} = require('./message.js');
@@ -6,7 +7,7 @@ describe('generateMessage', () => {
     it('should generate correct message object', () => {
         var from = 'Jen';
         var text = 'Some message';
-        var createdAt = new Date().toLocaleString();
+        var createdAt = moment().valueOf();
 
         var message = generateMessage(from,text);
 
@@ -20,7 +21,7 @@ describe('generateLocationMessage', ()=> {
         let from = 'Jen';
         let latitude = '5.6344208';
         let longitude = '-0.1696318';
-        let createdAt = new Date().toLocaleString();
+        let createdAt = moment().valueOf();
         url = `https://www.google.com/maps?q=${latitude},${longitude}`;
 
         var locMessage = generateLocationMessage(from, latitude, longitude);
